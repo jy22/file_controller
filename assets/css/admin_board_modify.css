@@ -1,0 +1,34 @@
+
+.tr2 input {
+    width: 98%;
+    height: 35px;
+    text-align: center;
+}
+
+.tr2 select {
+    width: 98%;
+    height: 35px;
+    padding: 5px;
+    text-align-last: center;
+}
+
+.control_panel .add_btn {
+    background: #6495ed;
+    color: #ffffff;
+}
+
+.control_panel .cancel_btn {
+    background: gray;
+    color: #ffffff;
+}
+
+.add_btn:hover {
+    background-color: dodgerblue;
+    color: #ffffff;
+}
+
+.cancel_btn:hover {
+    background-color: #444444;
+    color: #ffffff;
+}
+

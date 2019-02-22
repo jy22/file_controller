@@ -1,0 +1,80 @@
+
+
+.validation_form button {
+    width: 100%;
+    background: #6495ed;
+    color: #ffffff;
+    border: none;
+    margin-top: 3px;
+    padding: 10px;
+    font-size:18px;
+}
+
+.validation_form .layer_line {
+    border: 1px solid #bfbfbf;
+    border-top: none;
+}
+
+.validation_form button:hover {
+    background-color: dodgerblue;
+    color: #ffffff;
+}
+
+.container {
+    border-top: 1px solid #bfbfbf;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+}
+
+.container .important {
+    position: absolute;
+    color: red;
+    padding: 4px;
+}
+
+.container:hover .important {
+    color: #ffffff;
+}
+
+.container input {
+    width: 95%;
+    padding-left: 5px;
+    border: none;
+    margin: 10px;
+    height: 35px;
+}
+
+.container button {
+    float:right;
+    margin: 10px;
+    font-weight: bold;
+    font-size:12px;
+    width: 12%;
+}
+
+.container #birth {
+    width: 15%;
+}
+
+.container #useryear {
+    width: 20%;
+}
+
+.container #usermonth {
+    height: 30px;
+    width: 20%;
+}
+
+.container #userday {
+    width: 20%;
+}
+
+.container #pNumber {
+    width: 45%;
+}
+
+
+.container select {
+    border: none;
+}

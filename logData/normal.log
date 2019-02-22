@@ -1,0 +1,63 @@
+2019-02-20 09:48:02
+INSERT INTO `board` (`user_num`, `board_title`, `board_contents`, `board_filelist`, `board_modified_userid`, `board_modified_username`, board_create_date, board_modified_date) VALUES ('2', '테스틍', '1231', 'application/', 'jy22', '이주영', NOW(), NOW())
+
+2019-02-20 09:49:12
+UPDATE `board` SET `board_title` = '테스틍', `board_contents` = '1231', `board_filelist` = 'application/everyyyyy\r\napplication/dsdasdad', `board_modified_userid` = 'jy22', `board_modified_username` = '이주영', board_modified_date = NOW()
+WHERE `board_num` = '5'
+
+2019-02-20 09:57:35
+UPDATE `board` SET `board_title` = '두번째 게시글', `board_contents` = '파일권한체크', `board_filelist` = 'application/dsadasdada', `board_modified_userid` = 'jy22', `board_modified_username` = '이주영', board_modified_date = NOW()
+WHERE `board_num` = '2'
+
+2019-02-20 09:58:28
+UPDATE `board` SET `board_title` = '두번째 게시글', `board_contents` = '파일권한체크11', `board_filelist` = 'application/다시테스트', `board_modified_userid` = 'jy22', `board_modified_username` = '이주영', board_modified_date = NOW()
+WHERE `board_num` = '2'
+
+2019-02-20 10:03:04
+UPDATE `board` SET `board_title` = '두번째 게시글', `board_contents` = '파일권한체크11', `board_filelist` = 'application/다시테스트ㅌㅌㅌㅌ', `board_modified_userid` = 'jy22', `board_modified_username` = '이주영', board_modified_date = NOW()
+WHERE `board_num` = '2'
+
+2019-02-20 18:09:54
+UPDATE `board` SET `board_title` = '테스트중', `board_contents` = '안녕하세요', `board_filelist` = 'assets/aZXZXZXXZ', `board_modified_userid` = 'test', `board_modified_username` = '이주영', board_modified_date = NOW()
+WHERE `board_num` = '4'
+
+2019-02-22 13:33:31
+UPDATE `user` SET `userlevel` = '1', `userinfo` = '일반'
+WHERE `num` = '5'
+
+2019-02-22 13:33:46
+UPDATE `user` SET `userstatus` = 2
+WHERE `num` = '5'
+
+2019-02-22 13:39:26
+INSERT INTO `user` (`username`, `userid`, `userpwd`, userdate) VALUES ('테스팅', 'test2', '1234', NOW())
+
+2019-02-22 13:40:48
+INSERT INTO `board` (`user_num`, `board_title`, `board_contents`, `board_filelist`, `board_modified_userid`, `board_modified_username`, board_create_date, board_modified_date) VALUES ('7', '일반단계는', '접근할수있는곳이 너무제한적이야', 'application/views/front/write_board.php', 'test2', '테스팅', NOW(), NOW())
+
+2019-02-22 13:40:56
+UPDATE `board` SET `board_title` = '일반단계는', `board_contents` = '접근할수있는곳이 너무제한적이야', `board_filelist` = 'application/views/front/write_board.php', `board_modified_userid` = 'test2', `board_modified_username` = '테스팅', board_modified_date = NOW()
+WHERE `board_num` = '6'
+
+2019-02-22 13:42:38
+UPDATE `board` SET `board_title` = '일반단계는', `board_contents` = '접근할수있는곳이 너무제한적이야', `board_filelist` = 'application/views/front/write_board.php\r\napplication/assets/every', `board_modified_userid` = 'admin', `board_modified_username` = '관리자', board_modified_date = NOW()
+WHERE `board_num` = '6'
+
+2019-02-22 13:44:34
+UPDATE `board` SET `board_status` = 2, board_modified_date = NOW()
+WHERE `board_num` = '4'
+
+2019-02-22 16:22:12
+INSERT INTO `user` (`username`, `userid`, `userpwd`, userdate) VALUES ('이주영', 'test3', '1234', NOW())
+
+2019-02-22 16:26:50
+INSERT INTO `board` (`user_num`, `board_title`, `board_contents`, `board_filelist`, `board_modified_userid`, `board_modified_username`, board_create_date, board_modified_date) VALUES ('9', '게시글작성', '테스트내용', 'application/views/asdadasdasdasda', 'test3', '이주영', NOW(), NOW())
+
+2019-02-22 16:45:10
+UPDATE `user` SET `userlevel` = '1', `userinfo` = '일반'
+WHERE `num` = '3'
+
+2019-02-22 16:45:30
+UPDATE `user` SET `userstatus` = 2
+WHERE `num` = '9'
+

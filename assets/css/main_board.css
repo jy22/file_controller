@@ -1,0 +1,40 @@
+
+
+.tr3 {
+    background-color: #4F5155;
+    color: #ffffff;
+    height: 40px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.tr4 {
+    height: 40px;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.search_banner {
+    padding: 10px;
+}
+
+.search_banner input {
+    width: 20%;
+    height: 27px;
+    padding: 5px;
+    border: 1px solid #fee355;
+}
+
+
+.search_banner button {
+    width: 5%;
+    padding: 3px;
+    border: 1px solid gray;
+    background: #f6f6f6;
+}
+
+.search_banner button:hover {
+    border: 1px solid black;
+    background: #444444;
+    color: #ffffff;
+}

@@ -1,0 +1,70 @@
+
+.layer_shadow {
+    box-shadow: 1px 1px 11px #bfbfbf;
+    border: 1px solid #bfbfbf;
+    padding: 3px;
+}
+
+.container-1 {
+    width: 73%;
+    float: left;
+}
+
+.container-2 {
+    width: 27%;
+    float: left;
+}
+
+.panel-1 input {
+    width: 97%;
+    height: 40px;
+    margin-left: 3px;
+    margin-top: 2px;
+    padding: 5px;
+    border: 0.5px solid #bfbfbf;
+}
+
+.panel-2 input {
+    width: 95%;
+    height: 85px;
+    background: #6495ed;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+.sign_btn button {
+
+    padding: 5px;
+    margin-top: 10px;
+    margin-right: 4pt;
+    width: 25%;
+    background: #6495ed;
+    color: white;
+    font-size: 12px;
+    border: none;
+}
+
+.panel-2 input:hover {
+    background-color: dodgerblue;
+    color: #ffffff;
+}
+
+.sign_btn button:hover {
+    background-color: dodgerblue;
+    color: #ffffff;
+}
+
+.circle {
+    margin-top: 5px;
+    width: 10px;
+    height: 10px;
+    font-size: 1px;
+    font-family: HUFairy152;
+    color: white;
+    line-height: 8px;
+    text-align: center;
+    background: #a9a9a9;
+}
+
+

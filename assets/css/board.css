@@ -1,0 +1,31 @@
+
+
+.top_notice {
+    background: linear-gradient(#ebf5ee, #e4ffff);
+    padding: 15px;
+    border-bottom: 1px solid lightgray;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+}
+
+.body_notice {
+    border: 1px solid #fee355;
+    padding: 15px;
+    background: lightyellow;
+}
+
+.container-info button {
+    padding: 5px;
+    width: 10%;
+    font-size: 13px;
+    background: #6495ed;
+    color: #ffffff;
+    border: none;
+}
+
+
+.container-info button:hover {
+    background-color: dodgerblue;
+    color: #ffffff;
+}
