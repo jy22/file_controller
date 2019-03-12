@@ -8,7 +8,7 @@ class Login_model extends CI_Model
         parent::__construct();
     }
 
-    function addUserData($users=array())
+    function setUserData($users=array())
     {
         $this->db->set($users);
         $this->db->set('userdate', 'NOW()', false);

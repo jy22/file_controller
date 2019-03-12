@@ -1,8 +1,15 @@
 <article class="validation_form">
     <!-- 모달창으로 만들기-->
     <form action="/login/signup" method="post" onsubmit="return signUp()">
-        <?php echo validation_errors(); ?>
+
+		<?php if (validation_errors()) {
+			echo '<script>alert("' . str_replace(array("\r", "\n"), '\n', strip_tags(validation_errors())) . '");</script>';
+		}; ?>
+
         <div class="form_layer">
+            <p align="right">
+            <span class="back_login" onclick="location.href='./';">뒤로가기</span>
+            </p>
             <div class="notice_banner"> 회원가입</div>
             <div class="layer_line">
                 <!--이름-->
@@ -10,7 +17,6 @@
                     <span class="important">*</span>
                     <input type="text" id="username" name="username" placeholder="이름" maxlength="6"/>
                 </div>
-
                 <!--아이디-->
                 <div class="container">
                     <span class="important">*</span>
@@ -66,84 +72,85 @@
                 <!--                    <button type="button">인증</button>-->
                 <!--                </div>-->
             </div>
-             <button type="submit">가입하기</button>
+            <button type="submit">가입하기</button>
         </div>
     </form>
+</article>
 
-    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
-    <script>
+<script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+<script>
 
-        $(document).ready(function () {
-            $('#username').focus();
+    $(document).ready(function () {
+        $('#username').focus();
 
 
-            document.addEventListener('keydown', function (event) {
-                if (event.which === 13) {
-                    event.preventDefault();
-                }
-            }, true);
-        });
-
-        function signUp() {
-            var username = $.trim($('#username').val());
-            var userid = $.trim($('#userid').val());
-            var userpwd = $.trim($('#userpwd').val());
-            var usercpwd = $.trim($('#userCpwd').val());
-            // var useryear = $.trim($('#useryear').val());
-            // var usermonth = $.trim($('#usermonth').val());
-            // var userday = $.trim($('#userday').val());
-
-            for (var i = 0; i < username.length; i++) {
-                if (!((username.charCodeAt(i) > 0x3130 && username.charCodeAt(i) < 0x318F) ||
-                    (username.charCodeAt(i) >= 0xAC00 && username.charCodeAt(i) <= 0xD7A3))) {
-                    alert("이름은 한글만 입력해주세요");
-                    $('#username').focus();
-                    return false;
-                }
+        document.addEventListener('keydown', function (event) {
+            if (event.which === 13) {
+                event.preventDefault();
             }
+        }, true);
+    });
 
-            if (username == "") {
-                alert("이름을 입력하세요");
+    function signUp() {
+        var username = $.trim($('#username').val());
+        var userid = $.trim($('#userid').val());
+        var userpwd = $.trim($('#userpwd').val());
+        var usercpwd = $.trim($('#userCpwd').val());
+        // var useryear = $.trim($('#useryear').val());
+        // var usermonth = $.trim($('#usermonth').val());
+        // var userday = $.trim($('#userday').val());
+
+        for (var i = 0; i < username.length; i++) {
+            if (!((username.charCodeAt(i) > 0x3130 && username.charCodeAt(i) < 0x318F) ||
+                (username.charCodeAt(i) >= 0xAC00 && username.charCodeAt(i) <= 0xD7A3))) {
+                alert("이름은 한글만 입력해주세요");
                 $('#username').focus();
                 return false;
             }
-
-            if (userid == "") {
-                alert("아이디를 입력하세요");
-                $('#userid').focus();
-                return false;
-            }
-
-            if (userpwd == "") {
-                alert("비밀번호를 입력하세요");
-                $('#userpwd').focus();
-                return false;
-            }
-
-            if (userpwd != usercpwd) {
-                alert("비밀번호가 일치하지 않습니다");
-                $('#userCpwd').focus();
-                return false;
-            }
-            return true;
         }
 
-        // if (useryear == "") {
-        //     alert("년을 입력하세요");
-        //     $('#useryear').focus();
-        //     return false;
-        // }
-        //
-        // if (usermonth == "") {
-        //     alert("달을 선택하세요");
-        //     $('#usermonth').focus();
-        //     return false;
-        // }
-        //
-        // if (userday == "") {
-        //     alert("일을 입력하세요");
-        //     $('#userday').focus();
-        //     return false;
-        // }
-    </script>
-</article>
+        if (username == "") {
+            alert("이름을 입력하세요");
+            $('#username').focus();
+            return false;
+        }
+
+        if (userid == "") {
+            alert("아이디를 입력하세요");
+            $('#userid').focus();
+            return false;
+        }
+
+
+        if (userpwd == "") {
+            alert("비밀번호를 입력하세요");
+            $('#userpwd').focus();
+            return false;
+        }
+
+        if (userpwd != usercpwd) {
+            alert("비밀번호가 일치하지 않습니다");
+            $('#userCpwd').focus();
+            return false;
+        }
+        return true;
+    }
+
+    // if (useryear == "") {
+    //     alert("년을 입력하세요");
+    //     $('#useryear').focus();
+    //     return false;
+    // }
+    //
+    // if (usermonth == "") {
+    //     alert("달을 선택하세요");
+    //     $('#usermonth').focus();
+    //     return false;
+    // }
+    //
+    // if (userday == "") {
+    //     alert("일을 입력하세요");
+    //     $('#userday').focus();
+    //     return false;
+    // }
+</script>

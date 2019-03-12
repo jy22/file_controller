@@ -1,6 +1,5 @@
-
 <article class="login_form">
-    <form action="/login/login_prop" method="post" onsubmit="return loginCheck()">
+    <form action="/login/login_prep" method="post" onsubmit="return loginCheck()">
         <div class="form_layer">
             <div class="notice_banner"> 로그인</div>
             <div class="layer_shadow">
@@ -28,9 +27,9 @@
     </form>
 </article>
 
-
-
+<script src="http://code.jquery.com/jquery-3.1.1.js"></script>
 <script>
+
     $(document).ready(function () {
         $('#userid').focus();
 
@@ -67,3 +66,5 @@
     // }
 
 </script>
+
+

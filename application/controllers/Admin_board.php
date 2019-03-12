@@ -16,20 +16,33 @@ class Admin_board extends CI_Controller
             $this->session->set_flashdata('message', '올바른 접근이 아닙니다.');
             header("Location:./");
         }
+
         $this->load->model('admin_board_model');
-    }
+}
 
     public function index()
     {
-        $list = $this->admin_board_model->load_userList();
+        $list = $this->admin_board_model->get_userList();
         $this->load->view('inc/head');
         $this->load->view('admin/admin_board', array('list_user' => $list));
         $this->load->view('inc/footer');
     }
 
+    public function user_management() {
+
+        $list = $this->admin_board_model->wait_userList();
+        $this->load->view('inc/head');
+        $this->load->view('admin/admin_board', array('list_user' => $list));
+        $this->load->view('inc/footer');
+    }
+
+    public function user_agree() {
+
+    }
+
     public function user_detail($num)
     {
-        $index = $this->admin_board_model->load_userRow($num);
+        $index = $this->admin_board_model->get_user($num);
 
         $this->load->view('inc/head');
         $this->load->view('admin/admin_board_modify', array('row_user' => $index));
@@ -46,7 +59,7 @@ class Admin_board extends CI_Controller
 //       var_dump($array);
         //TODO : 수정날짜 추가
 
-        $this->admin_board_model->update_userRow($num, $array);
+        $this->admin_board_model->update_user($num, $array);
 
         $this->session->set_flashdata('message', '수정 되었습니다.');
         header("Location:/admin_board");
@@ -58,7 +71,7 @@ class Admin_board extends CI_Controller
             'userstatus' => 2
         );
 
-        $this->admin_board_model->update_userRow($num, $array);
+        $this->admin_board_model->update_user($num, $array);
 
         $this->session->set_flashdata('message', '삭제 되었습니다.');
         header("Location:/admin_board");

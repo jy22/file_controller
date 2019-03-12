@@ -17,9 +17,7 @@ if ($this->session->flashdata('message')) {
     <?php
 }
 ?>
-
 <br>
-
 <?php
     if ($this->session->userdata('is_login')) {
           if ($this->session->userdata('userinfo') == "관리자") {

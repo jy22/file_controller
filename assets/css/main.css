@@ -28,11 +28,13 @@ body {
 .notice_banner {
     font-size: 15pt;
     height: 20pt;
+    padding: 7px;
     text-align: center;
     font-weight: bold;
     margin-bottom: 5px;
     color: gray;
     border: 1px solid #bfbfbf;
+    background: white;
 }
 
 .form_layer {
@@ -41,7 +43,6 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -80%);
-    background-color: white;
 }
 
 .view_layer {
@@ -50,6 +51,5 @@ body {
     top: 10%;
     left: 50%;
     transform: translate(-50%);
-    background-color: white;
 }
 

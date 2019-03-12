@@ -40,3 +40,15 @@
     background-color: orangered;
     color: #ffffff;
 }
+
+.wait {
+    padding: 3px;
+    border: none;
+    background: #6495ed;
+    color: #ffffff;
+}
+
+.wait:hover {
+    background-color: dodgerblue;
+    color: #ffffff;
+}
